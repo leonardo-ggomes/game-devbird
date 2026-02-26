@@ -29,7 +29,7 @@ class JogoHappyBird {
         };
 
         // --- 3. POSIÇÕES E OBJETOS ---
-        this.estilingue = { x: 150, y: this.canvas.height - 180 };
+        this.estilingue = { x: 550, y: this.canvas.height - 180 };
         this.passaro = {
             x: 0, y: 0, largura: 50, altura: 50,
             xInicial: 0, yInicial: 0, vX: 0, vY: 0, tempoDeVoo: 0
