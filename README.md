@@ -1,58 +1,145 @@
 
-# DevBird 🐦
+````md
+# DevBird – Gesture Controlled Browser Game
 
-A simple web-based game inspired by the classic Fruit Ninja, developed using HTML, CSS, and JavaScript.
+> Jogo experimental inspirado em Angry Birds, controlado por **gestos da mão**, executado **diretamente no navegador** usando JavaScript.
 
-## Table of Contents
+---
 
-- [Introduction](#introduction)
-- [Features](#features)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Dependencies](#dependencies)
-- [Contributors](#contributors)
-- [License](#license)
+## Sobre o Projeto
 
-## Introduction
+**DevBird** é um jogo de lançamento de projéteis onde o jogador interage sem mouse ou teclado.  
+Toda a interação acontece por meio da **câmera**, utilizando **gestos naturais da mão**.
 
-This project is a browser version of the popular Angry Birds game. Players can launch the devbird at birds that are flying.
+O projeto roda 100% no navegador e foi desenvolvido com foco em:
 
-## Features
+- Game Dev com JavaScript
+- Visão computacional no browser
+- Interação humano–computador
+- Experimentos com novas formas de input
 
-- Interactive gameplay with fruit slicing mechanics
-- Score tracking
-- Responsive design suitable for various screen sizes
+---
 
-## Installation
+## Como Jogar (Controle por Gestos)
 
-1. Clone the repository:
+O jogo utiliza a câmera para detectar o estado da mão do jogador.
 
-   ```bash
-   git clone https://github.com/leonardo-ggomes/fruit-ninja.git
-   ```
+### Mecânica principal
 
+1. Fique em frente à câmera
+2. **Feche a mão**
+   - O jogo entende que você está “segurando” o pássaro
+3. Leve a mão fechada até próximo do pássaro na tela
+   - Esse movimento define **direção e força**
+4. **Abra a mão**
+   - O pássaro é lançado automaticamente
 
-2. Navigate to the project directory:
+Quanto maior o deslocamento da mão, maior a força aplicada ao lançamento.
 
-   ```bash
-   cd devbird
-   ```
+---
 
+## Funcionamento Interno (Visão Geral)
 
-## Usage
+Fluxo simplificado:
 
-Open the `index.html` file in your preferred web browser to start playing the game.
+```text
+Câmera
+  ↓
+Detecção da mão
+  ↓
+Estado (aberta / fechada)
+  ↓
+Cálculo do vetor de força
+  ↓
+Lançamento do pássaro
+````
 
-## Dependencies
+O loop do jogo calcula continuamente:
 
-This project uses standard web technologies and does not rely on external libraries.
+* Posição da mão
+* Estado do gesto
+* Física básica do projétil (gravidade e velocidade)
 
-## Contributors
+---
 
-- [Leonardo Gomes](https://github.com/leonardo-ggomes/)
+## Tecnologias Utilizadas
 
-## License
+* JavaScript
+* HTML5 Canvas
+* API de Câmera do Navegador (getUserMedia)
+* Detecção de mão no browser
+* Live Server (ambiente de execução)
 
-This project is open-source and available under the [MIT License](LICENSE).
+---
 
-*Note: The information provided is based on the current state of the repository. For more details, please visit the [fruit-ninja repository](https://github.com/leonardo-ggomes/fruit-ninja).* 
+## Como Executar o Jogo
+
+### Pré-requisitos
+
+* Navegador moderno (Chrome, Edge ou Firefox)
+* Webcam funcional
+* Extensão **Live Server** no VS Code
+
+### Passos
+
+1. Clone o repositório:
+
+```bash
+git clone https://github.com/leonardo-ggomes/game-devbird.git
+```
+
+2. Abra o projeto no VS Code
+3. Clique com o botão direito no `index.html`
+4. Selecione **“Open with Live Server”**
+5. Autorize o acesso à câmera no navegador
+
+O jogo será executado localmente no navegador.
+
+---
+
+## Observações Importantes
+
+* O jogo **não funciona abrindo o HTML diretamente** (file://)
+* É necessário rodar via servidor local (Live Server)
+* Boa iluminação melhora significativamente a detecção da mão
+
+---
+
+## Objetivo do Projeto 🐦
+
+Este projeto tem caráter educacional e experimental, sendo ideal para:
+
+* Aprender game dev com JavaScript
+* Explorar visão computacional no navegador
+* Criar jogos baseados em gestos
+* Demonstrar conceitos de física aplicada em jogos
+
+---
+
+## Demonstração
+
+(Recomenda-se adicionar um GIF ou vídeo mostrando o gesto da mão e o lançamento do pássaro)
+
+```text
+Mão fechada  → pássaro preso
+Mover a mão  → define força e direção
+Mão aberta  → lançamento
+```
+
+---
+
+## Contribuições
+
+Sugestões e melhorias são bem-vindas, como:
+
+* Ajustes na física
+* Novos níveis
+* Feedback visual do gesto
+* Melhorias na detecção da mão
+
+---
+
+## Autor
+
+Leonardo Gomes
+
