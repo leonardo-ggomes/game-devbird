@@ -63,7 +63,7 @@ class JogoHappyBird {
         this.spritesPassaro[0].src = "./assets/CuteFlappy/flappy00.png";
         this.spritesPassaro[1].src = "./assets/CuteFlappy/flappy05.png";
         this.imgInimigo = new Image();
-        this.imgInimigo.src = "./assets/CuteFlappy/flappy04.png";
+        this.imgInimigo.src = "./assets/CuteFlappy/jubarte.png";
         this.imgChao = new Image();
         this.imgChao.src = "./assets/CuteFlappy/ground.png";
         this.imgCeu = new Image();
