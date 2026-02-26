@@ -1,6 +1,5 @@
-Based on the information available from the GitHub repository [leonardo-ggomes/fruit-ninja](https://github.com/leonardo-ggomes/fruit-ninja), here is a proposed README file for the project:
 
-# Fruit Ninja 🍉🥷
+# DevBird 🐦
 
 A simple web-based game inspired by the classic Fruit Ninja, developed using HTML, CSS, and JavaScript.
 
@@ -16,7 +15,7 @@ A simple web-based game inspired by the classic Fruit Ninja, developed using HTM
 
 ## Introduction
 
-This project is a browser-based version of the popular Fruit Ninja game. Players can slice fruits appearing on the screen while avoiding bombs to achieve high scores.
+This project is a browser version of the popular Angry Birds game. Players can launch the devbird at birds that are flying.
 
 ## Features
 
@@ -36,7 +35,7 @@ This project is a browser-based version of the popular Fruit Ninja game. Players
 2. Navigate to the project directory:
 
    ```bash
-   cd fruit-ninja
+   cd devbird
    ```
 
 
